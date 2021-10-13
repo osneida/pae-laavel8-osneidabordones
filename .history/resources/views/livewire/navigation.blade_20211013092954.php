@@ -36,9 +36,9 @@
 
 
             @can('admin.home') 
-            <x-responsive-nav-link :href="route('admin')" :active="request()->routeIs('admin')">
+            <x-jet-dropdown-link href="{{ route('admin') }}">
               {{ __('Administrar') }}
-          </x-responsive-nav-link>
+             </x-jet-dropdown-link>
             @endcan
 
 

@@ -14,7 +14,7 @@ los plugggins que no este en la pagina los coloco para poderlos usar
 @stop
 
 @section('content')
-    <p>Bienvenido</p>
+    <p>Welcome to this beautiful admin panel.</p>
 @stop
 
 @section('css')

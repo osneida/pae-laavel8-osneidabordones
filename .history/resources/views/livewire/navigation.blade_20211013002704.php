@@ -34,16 +34,6 @@
                 {{ __('Contacto') }}
             </x-responsive-nav-link>
 
-
-            @can('admin.home') 
-            <x-responsive-nav-link :href="route('admin')" :active="request()->routeIs('admin')">
-              {{ __('Administrar') }}
-          </x-responsive-nav-link>
-            @endcan
-
-
-          
-
               </div>
           </div>
         </div>

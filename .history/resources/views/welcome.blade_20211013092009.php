@@ -35,10 +35,9 @@
                     @endauth
                 </div>
             @endif
-            <div class="p-6 bg-white border-b border-gray-200 text-center">
-
-                <h1> Laravel 8 - Osneida Bordones </h1>
-                <h2> Listar, crear, modificar y eliminar un Post su Categoría y sus etiquetas </h2>
+            <div class="p-6 bg-white border-b border-gray-200">
+                <h1 class="text-align-center"> Laravel 8 - Osneida Bordones </h1>
+                <h2> listar, crear, modificar y eliminar un Post y sus Categoria </h2>
                 <h3> Sólo por un usuario Registrado con el Rol de Admin</h3>
              </div>
             </div>

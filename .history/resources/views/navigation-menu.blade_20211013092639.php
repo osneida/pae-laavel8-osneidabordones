@@ -91,6 +91,11 @@
                         </x-slot>
 
                         <x-slot name="content">
+                            <!-- Account Management -->
+                             <div class="block px-4 py-2 text-xs text-gray-400">
+                                {{ __('Administrar') }}
+                            </div> 
+
                             <x-jet-dropdown-link href="{{ route('admin') }}">
                                 {{ __('Administrar') }}
                             </x-jet-dropdown-link>
@@ -98,6 +103,9 @@
                             <x-jet-dropdown-link href="{{ route('profile.show') }}">
                                 {{ __('Perfil') }}
                             </x-jet-dropdown-link>
+
+       
+
 
                             <!-- Authentication -->
                             <form method="POST" action="{{ route('logout') }}">
@@ -132,18 +140,7 @@
             <x-jet-responsive-nav-link href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')">
                 {{ __('Dashboard') }}
             </x-jet-responsive-nav-link>
-
-            <x-jet-responsive-nav-link href="{{ route('contact.index') }}" :active="request()->routeIs('contact.index')">
-                {{ __('Contacto') }}
-            </x-jet-responsive-nav-link>
-
-            <x-jet-responsive-nav-link href="{{ route('admin') }}" :active="request()->routeIs('admin')">
-                {{ __('admin') }}
-            </x-jet-responsive-nav-link>
-
         </div>
-
-
 
         <!-- Responsive Settings Options -->
         <div class="pt-4 pb-1 border-t border-gray-200">
