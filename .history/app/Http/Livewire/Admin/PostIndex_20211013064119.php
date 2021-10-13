@@ -3,8 +3,8 @@
 namespace App\Http\Livewire\Admin;
 
 use Livewire\Component;
-use App\Models\Post;
 
+use App\Models\Post;
 use Livewire\WithPagination;
 
 class PostIndex extends Component

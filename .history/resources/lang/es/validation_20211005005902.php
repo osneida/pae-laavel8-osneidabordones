@@ -165,7 +165,5 @@ return [
         'title'                 => 'título',
         'username'              => 'usuario',
         'year'                  => 'año',
-        'extract'               => 'extracto',
-        'tags'                  => 'etiqueta'
     ],
 ];

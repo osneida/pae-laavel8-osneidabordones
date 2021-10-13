@@ -11,7 +11,7 @@
         </div>
         @if ($users->count())
             <div class="card-bpdy">
-                <table class="table table-responsive"  id="usuarios">
+                <table class="table table-striped" id="usuarios">
                     <thead>
                         <tr>
                             <th>ID</th>

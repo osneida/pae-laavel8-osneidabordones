@@ -266,9 +266,10 @@ return [
             'icon'        => 'fas fa-users-cog fa-fw',
             'can'         => 'admin.users.index',
         ],
-        [   'header' => 'ADMINISTRADOR',
-            'can'         => 'admin.users.index',
-        ],
+
+        @can('admin.home')
+        ['header' => 'ADMINISTRADOR'],
+        @endcan
         [
             'text'  => 'Categorías',
             'route' => 'admin.categories.index', //http://apibase/admin/categories
@@ -279,7 +280,7 @@ return [
         ],
 
         ['header' => 'OPCIONES DE BLOGER'],
-        
+
         [
             'text'  => 'Lista de post',
             'route' => 'admin.posts.index',  

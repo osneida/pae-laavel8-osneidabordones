@@ -266,9 +266,7 @@ return [
             'icon'        => 'fas fa-users-cog fa-fw',
             'can'         => 'admin.users.index',
         ],
-        [   'header' => 'ADMINISTRADOR',
-            'can'         => 'admin.users.index',
-        ],
+        ['header' => 'ADMINISTRADOR'],
         [
             'text'  => 'Categorías',
             'route' => 'admin.categories.index', //http://apibase/admin/categories
