@@ -6,7 +6,7 @@
 adminlte asset por true y cambio e location estan en vendor/nombre/..js 
 los plugggins que no este en la pagina los coloco para poderlos usar
 -->
-@section('title', 'Categoríagit')
+@section('title', 'Categoría')
 
 @section('content_header')
     <h1>Mostrar Detalle de Categoría</h1>

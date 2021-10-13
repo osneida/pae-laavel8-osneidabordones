@@ -275,7 +275,7 @@ return [
             'can'   => 'admin.categories.index',
             
         ],
-        ['header' => 'OPCIONES DE BLOGER'],
+        ['header' => 'OPCIONES DE BLOG'],
         [
             'text'  => 'Lista de post',
             'route' => 'admin.posts.index',  

@@ -4,17 +4,16 @@ namespace App\Http\Requests\Admin;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class PostRequest extends FormRequest
+class StorePostRequest extends FormRequest
 {
 
     public function authorize()
     {
-        return true;
-        // if($this->user_id == auth()->user()->id){
-        //     return true;
-        // } else {
-        //     return false;
-        // }
+        if($this->user_id == auth()->user()->id){
+            return true;
+        } else {
+            return false;
+        }
     }
 
     public function rules()

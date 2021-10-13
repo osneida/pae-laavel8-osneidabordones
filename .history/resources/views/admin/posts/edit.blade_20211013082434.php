@@ -9,7 +9,9 @@
 @section('content')
 <div class="card">
     <div class="card-body">
-        {!! Form::model($post,['route' => ['admin.posts.update', $post], 'autocomplete' => 'off', 'files' => true, 'method' => 'put']) !!}
+        {!! Form::model($post,['route' => 'admin.posts.store', 'autocomplete' => 'off']) !!}
+     
+        {!! Form::hidden('user_id', auth()->user()->id) !!}
      
             @include('admin.posts.partials.form')
 

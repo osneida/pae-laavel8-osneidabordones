@@ -10,9 +10,8 @@ class Post extends Model
 {
     use HasFactory;
 
-    //asignación masiva coloco los que no se guardaran con guarded
-    protected $guarded = [
-        'id', 'create_at', 'updated_at'
+    protected $fillable = [
+        'name', 'slug'
     ];
     
     //relacion uno a muchos inversa

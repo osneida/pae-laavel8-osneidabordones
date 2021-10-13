@@ -57,8 +57,6 @@ class PostController extends Controller
 
     public function edit(Post $post){
 
-        $this->authorize('author', $post);
-
         $categories = Category::orderBy('name')->pluck('name','id');
         $tags = Tag::all(); //orderBy('name')->
 
@@ -69,7 +67,6 @@ class PostController extends Controller
 
         try {
             
-            $this->authorize('author', $post);
             $post->update($request->all());
 
             if($request->tags){
@@ -89,7 +86,6 @@ class PostController extends Controller
 
         try {
 
-            $this->authorize('author', $post);
             $post->delete();
 
             return redirect()->route('admin.posts.index')->with('info','El Post se eliminó con éxito');

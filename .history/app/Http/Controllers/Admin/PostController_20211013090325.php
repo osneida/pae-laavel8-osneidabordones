@@ -69,7 +69,6 @@ class PostController extends Controller
 
         try {
             
-            $this->authorize('author', $post);
             $post->update($request->all());
 
             if($request->tags){
@@ -89,7 +88,6 @@ class PostController extends Controller
 
         try {
 
-            $this->authorize('author', $post);
             $post->delete();
 
             return redirect()->route('admin.posts.index')->with('info','El Post se eliminó con éxito');

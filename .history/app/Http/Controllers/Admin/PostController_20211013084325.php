@@ -16,9 +16,6 @@ class PostController extends Controller
     public function __construct()
     {
         $this->middleware('can:admin.posts.index')->only('index');
-        $this->middleware('can:admin.posts.create')->only('create', 'store');
-        $this->middleware('can:admin.posts.edit')->only('edit', 'update');
-        $this->middleware('can:admin.posts.destroy')->only('destroy');
     }
 
     public function index() {
@@ -57,8 +54,6 @@ class PostController extends Controller
 
     public function edit(Post $post){
 
-        $this->authorize('author', $post);
-
         $categories = Category::orderBy('name')->pluck('name','id');
         $tags = Tag::all(); //orderBy('name')->
 
@@ -69,18 +64,17 @@ class PostController extends Controller
 
         try {
             
-            $this->authorize('author', $post);
             $post->update($request->all());
 
             if($request->tags){
                 $post->tags()->sync($request->tags);
             }
 
-            return redirect()->route('admin.posts.index')->with('info', 'el Post se modificó con éxito');
+            return redirect()->route('admin.posts.index')->with('info', 'La categoría se modificó con éxito');
             
         } catch(\Exception $exception){
 
-            return redirect()->route('admin.posts.index')->with('info','El Post No se modifico');
+            return redirect()->route('admin.posts.index')->with('info','La categoría No se modifico');
 
         }
     }
@@ -89,14 +83,13 @@ class PostController extends Controller
 
         try {
 
-            $this->authorize('author', $post);
             $post->delete();
 
-            return redirect()->route('admin.posts.index')->with('info','El Post se eliminó con éxito');
+            return redirect()->route('admin.posts.index')->with('info','La categoría se eliminó con éxito');
 
         } catch(\Exception $exception){
 
-            return redirect()->route('admin.posts.index')->with('info','El Post No se pudo eliminaar');
+            return redirect()->route('admin.posts.index')->with('info','La categoría No se pudo eliminaar');
 
         }
     }

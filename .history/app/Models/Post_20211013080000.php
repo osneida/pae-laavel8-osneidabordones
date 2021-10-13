@@ -10,7 +10,6 @@ class Post extends Model
 {
     use HasFactory;
 
-    //asignación masiva coloco los que no se guardaran con guarded
     protected $guarded = [
         'id', 'create_at', 'updated_at'
     ];

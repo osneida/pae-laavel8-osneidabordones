@@ -275,7 +275,13 @@ return [
             'can'   => 'admin.categories.index',
             
         ],
-        ['header' => 'OPCIONES DE BLOGER'],
+        [
+            'text'  => 'Etiquetas',
+            'route' => 'admin.tags.index',  
+            'icon'  => 'fas fa-tags',
+            'can'   => 'admin.tags.index'
+        ],
+        ['header' => 'OPCIONES DE BLOG'],
         [
             'text'  => 'Lista de post',
             'route' => 'admin.posts.index',  
